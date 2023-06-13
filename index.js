@@ -35,6 +35,7 @@ app.get('/api/users', async (req, res) => {
         // const result = await client.query(`SELECT id, movie_title, imdb_score FROM MOVIES order by imdb_score desc LIMIT 25 OFFSET ${req.query.offset}`);
         res.send({count: 10, total: data.length, rows: data.slice(req.query.offset, Number(req.query.offset) + 10)});
         console.log(req.query.offset+10)
+        
     } catch (error) {
         console.error('Could not retrieve movies from db', error);
         res.send({count: 0, rows: []});
