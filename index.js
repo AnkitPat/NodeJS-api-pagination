@@ -28,7 +28,7 @@ const data = [{"id":1,"employee_name":"Tiger Nixon","employee_salary":320800,"em
 //     client.release();
 // });
 
-app.get('/api/users', async (req, res) => {
+app.get('/users', async (req, res) => {
     // const client = await pool.connect();
     try {
         // const count = await client.query('SELECT COUNT(1) as total from MOVIES');
